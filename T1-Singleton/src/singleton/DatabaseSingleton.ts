@@ -1,7 +1,6 @@
 export default class DatabaseSingleton {
     private static instance: DatabaseSingleton;
     private isConnected: boolean;
-    private nomeExemplo : string;
   
     private constructor() {
       this.isConnected = false;
