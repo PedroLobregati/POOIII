@@ -1,9 +1,9 @@
 import DatabaseSingleton from "./singleton/DatabaseSingleton";
 
-const connection1 = DatabaseSingleton.getInstance();
-connection1.connect();
+const conexao1 = DatabaseSingleton.getInstance();
+conexao1.connect();
 
-const connection2 = DatabaseSingleton.getInstance();
-connection2.connect(); 
+const conexao2 = DatabaseSingleton.getInstance();
+conexao2.connect(); 
 
-connection1.disconnect();
+conexao2.disconnect();
