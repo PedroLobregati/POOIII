@@ -7,3 +7,5 @@ const conexao2 = DatabaseSingleton.getInstance();
 conexao2.connect(); 
 
 conexao2.disconnect();
+
+conexao1.disconnect();
