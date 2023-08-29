@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Playlist Músicas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item>
+      <ion-toggle (ionChange)="habilitar()">Habilitar Edição</ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Nome" placeholder="Nome da música" [(ngModel)]="nome" disabled="{{edicao}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Banda" placeholder="Banda" [(ngModel)]="banda" disabled="{{edicao}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Ano de Lançamento" placeholder="Ano de Lançamento" [(ngModel)]="anoLancamento" disabled="{{edicao}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Álbum" placeholder="Álbum" [(ngModel)]="album" disabled="{{edicao}}"></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-select aria-label="Genero" interface="popover" placeholder="Gênero" [(ngModel)]="genero" disabled=true>
+          <ion-select-option value="Sertanejo">Sertanejo</ion-select-option>
+          <ion-select-option value="Pop-Rock">Pop-Rock</ion-select-option>
+          <ion-select-option value="Hip-hop">Hip-hop</ion-select-option>
+          <ion-select-option value="Pagode">Pagode</ion-select-option>
+          <ion-select-option value="Funk">Funk</ion-select-option>
+          <ion-select-option value="Dance/eletrônica">Dance/eletrônica</ion-select-option>
+          <ion-select-option value="Rock">Rock</ion-select-option>
+          <ion-select-option value="Jazz">Jazz</ion-select-option>
+          <ion-select-option value="Blues">Blues</ion-select-option>
+          <ion-select-option value="Country">Country</ion-select-option>
+          <ion-select-option value="Pop">Pop</ion-select-option>
+          <ion-select-option value="Clássica">Clássica</ion-select-option>
+          <ion-select-option value="Reggae">Reggae</ion-select-option>
+          <ion-select-option value="Bossa Nova">Bossa Nova</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" (click)="editar()" disabled="{{edicao}}">Salvar</ion-button>
+    <ion-button expand="block" (click)="excluir()" disabled="{{edicao}}" color="danger">Excluir</ion-button>
+  </ion-list>
+
+</ion-content>

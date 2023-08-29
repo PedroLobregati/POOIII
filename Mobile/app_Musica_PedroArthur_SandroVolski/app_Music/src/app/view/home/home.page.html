@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar class="header-personalizado">
+    <ion-title>
+      <ion-icon name="musical-note-outline"></ion-icon> PLAYLIST DE MÚSICAS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-color: red;">
+
+  <ion-list *ngFor="let musica of lista_musicas; let i = index">
+    <ion-item (click)="editar(i)" class="item-musica">
+      <ion-icon slot="start" name="musical-note-outline"></ion-icon>
+      <div>
+        <h2>{{musica.nome}}</h2>
+        <p>{{musica.banda}}</p>
+      </div>
+    </ion-item>
+    <hr />
+  </ion-list>
+
+  <ion-fab horizontal="center" vertical="bottom">
+    <ion-fab-button class="botao-adicionar" (click)="irParaCadastrar()">
+      ADICIONAR MÚSICA
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
